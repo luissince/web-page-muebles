@@ -17,6 +17,7 @@ WORKDIR /app
 COPY --from=builder /app/package*.json ./
 RUN npm install --production
 
+COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next
 
 EXPOSE 3000
