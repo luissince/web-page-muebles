@@ -11,33 +11,36 @@ const config: Config = {
       backgroundColor:{
         'qgray-border': 'rgb(239 239 239/1)',
         'search-btn': 'rgb(255 187 56/1)',
-        'qyellow': 'rgb(255 187 56/1)'
+        'qyellow': 'rgb(255 187 56/1)',
+        'banner': 'rgba(0, 0, 0, 0.4)',
+        'greenBanner': '#756a66',
+        products: "#dce5e4",
+        popularProducts: '#dce5e4',
+        prevNext: 'rgba(59, 93, 80, 0.1)',
+        testimonials: '#d6d6d6',
+        nosotros: 'rgba(59, 93, 80, 0.2)',
+        whatsapp: '#0df053',
+        chat: '#FAFAFA'
       },
       backgroundImage: {
-        'portada': "url('/assets/section-category-1.jpg')",
+        'bannerRight': "url('/assets/dots-light.svg')",
+        'banner2': "url('/assets/PORTADA3.jpeg')",
+        'banner3': "url('/assets/PORTADA1.jpg')",
         'postBrandLeft': "url('/assets/campaign-cover-countdown.jpg')",
-        'postBrandRight': "url('/assets/download-app-cover.png')",
-        'popularSaleLeft': "url('/assets/section-category-2.jpg')",
-        'popularSaleRightOne': "url('/assets/product-img-5.jpg')",
-        'popularSaleRightTwo': "url('/assets/product-img-6.jpg')",
-        'popularSaleRightThree': "url('/assets/product-img-7.jpg')",
-        'newArrivals1': "url('/assets/product-img-1.jpg')",
-        'newArrivals2': "url('/assets/product-img-2.jpg')",
-        'newArrivals3': "url('/assets/product-img-3.jpg')",
-        'newArrivals4': "url('/assets/product-img-4.jpg')",
-        'newArrivals5': "url('/assets/product-img-5.jpg')",
-        'newArrivals6': "url('/assets/product-img-6.jpg')",
-        'newArrivals7': "url('/assets/product-img-7.jpg')",
-        'newArrivals8': "url('/assets/product-img-8.jpg')",
-        'newArrivals9': "url('/assets/product-img-9.jpg')",
-        'newArrivals10': "url('/assets/product-img-10.jpg')",
-        'newArrivals11': "url('/assets/product-img-1.jpg')",
-        'newArrivals12': "url('/assets/product-img-2.jpg')",
-        'discount': "url('/assets/discount-banner-1.jpg')"
+        'whychoose': "url('/assets/dots-yellow.svg')",
+        'weHelp': "url('/assets/dots-green.svg')"
       },
       colors: {
-        primary: "#00040f",
-        secondary: "#00f6ff",
+        primary: "#2f2f2f",
+        secondary: "#F9BF29",
+        btn: "rgba(255, 255, 255, 0.3)",    
+        paragraph: "rgba(255, 255, 255, 0.5)",
+        wychoose: "#6a6a6a",
+        footer: '#3b5d50',
+        imputFootr: '#212529',
+        borderInputFooter: '#ced4da',
+        iconsFoot: '#dce5e4',
+        borderFooter: '#dee2e6',
         dimWhite: "rgba(255, 255, 255, 0.7)",
         dimBlue: "rgba(9, 151, 124, 0.1)",
         guindaLigth: '#FD9398',
@@ -49,14 +52,15 @@ const config: Config = {
         qblacktext: "rgb(29 29 29/1)",
         qyellow: "rgb(255 187 56/1)",
         qred: "rgb(239 38 44/1)",
-        primarygray: "rgb(248 248 248/1)"
+        primarygray: "rgb(248 248 248/1)",
+        whatsapp: '#0df053'
       },
       fontFamily: {
         poppins: ["Roboto", "sans-serif"],
         primaSans: ["sans-serif"],
       },
       borderColor:{
-        'qgray-border': "rgb(239 239 239/1)"
+        'weHelp': "#3b5d50",        
       },
       fontWeight: {
         boldCustomer: '400',
@@ -76,6 +80,12 @@ const config: Config = {
         "spin-reverse": {
           'to': { transform: 'rotate(-1turn)' },
         }
+      },
+      transitionProperty: {
+        'products': '.3s all ease'
+      },
+      gridTemplateColumns: {
+        "weHelp": "repeat(27, 1fr)"
       }
     }, 
     screens: {

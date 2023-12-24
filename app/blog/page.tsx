@@ -6,10 +6,10 @@ function Banner() {
                 <div className="flex flex-wrap mt-0 mx-[-12] justify-between">
                     <div className="lg:w-[42%] w-full px-3">
                         <div className="relative max-w-md z-[4]">
-                            <h1 className="text-white text-4xl lg:text-5xl font-bold mb-[30px] leading-10 lg:leading-[3.5rem]">Acerca de <br /><span className="d-block">Nosotros</span></h1>
+                            <h1 className="text-white text-4xl lg:text-5xl font-bold mb-[30px] leading-10 lg:leading-[3.5rem]">Nuestro <br /><span className="d-block">Blog</span></h1>
                             <p className="text-paragraph text-sm mb-10 leading-6">
-                                Somos la elección perfecta para muebles de calidad. Cada pieza que fabricamos refleja artesanía excepcional y diseño cuidadoso.
-                                En nuestra empresa, creamos muebles que transforman espacios y hacen de cada hogar un lugar único.
+                                Cada pieza es creada con esmero, asegurando no solo la durabilidad, sino también un acabado impecable. Nos enorgullece ofrecer productos que no solo son visualmente atractivos,
+                                sino que también reflejan la artesanía excepcional y el compromiso con la excelencia en cada detalle.
                             </p>
                             <p className="mb-4">
                                 <a href="" className="btn bg-secondary font-semibold pt-3 pr-8 pb-3 pl-8 rounded-[30px] mr-2">Cotizar ahora</a>
@@ -33,136 +33,119 @@ function Banner() {
     );
 }
 
-function WhyChoose() {
+function BlogSection() {
     return (
-        <div className="py-28 px-0">
-            <div className="max-w-[1320px] mx-auto">
-                <div className="flex flex-wrap mt-[0] lg:mr-[0.75px] lg:ml-[0.75px] xs:mx-3 justify-between">
-                    <div className="lg:w-1/2 w-full">
-                        <h2 className="text-primary text-[2rem] mt-0 mb-6 lg:mb-3 font-medium leading-[1.2] text-center lg:text-left">Por que Escogernos</h2>
-                        <p className="mt-0 mb-4 text-center lg:text-left lg:mr-3">
-                            En nuestro compromiso con la calidad y la excelencia, todos nuestros productos están
-                            meticulosamente confeccionados utilizando maderas de la más alta calidad. Cada pieza es creada con esmero, asegurando no solo la
-                            durabilidad, sino también un acabado impecable.
-                        </p>
+        <div className="pt-28 pr-0 lg:pb-48 pb-10 pl-0">
+            <div className="max-w-[1320px] mx-auto w-full">
+                <div className="flex flex-wrap mt-0">
 
-                        <div className="my-12 flex flex-wrap mx-2 lg:mr-[0.75px] lg:ml-[0.75px]">
-                            <div className="w-1/2 pr-2 lg:pr-0">
-                                <div className="mb-8">
-                                    <div className="inline-block relative mb-5">
-                                        <img src="assets/truck.svg" alt="Image" className="imf-fluid" />
-                                    </div>
-                                    <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Fast &amp; Free Shipping</h3>
-                                    <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                    <div className="flex basis-auto w-full lg:w-[33.33%] mb-12 px-3">
+                        <div className="post-entry">
+                            <a href="#" className="block mb-5 text-primary "><img src="assets/muebles/cama2.png" alt="Image" className="rounded-[20px] max-w-full h-auto align-middle" /></a>
+                            <div className="px-[15px]">
+                                <h3 className="text-base font-semibold mb-2 mt-0 leading-[1.2]"><a href="#" className="text-primary ">Cama para Dormitorio de 2 Plazas</a></h3>
+                                <div className="text-sm">
+                                    <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
                                 </div>
                             </div>
-
-                            <div className="w-1/2 pl-2 lg:pl-0">
-                                <div className="mb-8">
-                                    <div className="inline-block relative mb-5">
-                                        <img src="assets/bag.svg" alt="Image" className="imf-fluid" />
-                                    </div>
-                                    <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Easy to Shop</h3>
-                                    <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                                </div>
-                            </div>
-
-                            <div className="w-1/2 pr-2 lg:pr-0">
-                                <div className="mb-8">
-                                    <div className="inline-block relative mb-5">
-                                        <img src="assets/support.svg" alt="Image" className="imf-fluid" />
-                                    </div>
-                                    <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">24/7 Support</h3>
-                                    <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                                </div>
-                            </div>
-
-                            <div className="w-1/2 pl-2 lg:pl-0">
-                                <div className="mb-8">
-                                    <div className="inline-block relative mb-5">
-                                        <img src="assets/return.svg" alt="Image" className="imf-fluid" />
-                                    </div>
-                                    <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Hassle Free Returns</h3>
-                                    <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 
-                    <div className="lg:w-[41.67%] w-full mt-10 lg:mt-0">
-                        <div className="relative after:absolute after:w-[300px] lg:after:w-[500px] after:h-[200px] after:bg-whychoose after:bg-no-repeat after:bg-contain after:content-normal after:top-[-80px] after:left-[-95px] after:z-[-1]">
-                            <img src="assets/muebles/ropero2.png" alt="Image" className="rounded-[20px] max-w-screen-xxs lg:max-w-full h-auto align-middle ml-10 lg:ml-0" />
+                    <div className="flex basis-auto w-full lg:w-[33.33%] mb-12 px-3">
+                        <div className="post-entry">
+                            <a href="#" className="block mb-5 text-primary "><img src="assets/muebles/mesadenoche2.png" alt="Image" className="rounded-[20px] max-w-full h-auto align-middle" /></a>
+                            <div className="px-[15px]">
+                                <h3 className="text-base font-semibold mb-2 mt-0 leading-[1.2]"><a href="#" className="text-primary ">Mesa de Centro, diseño futurista</a></h3>
+                                <div className="text-sm">
+                                    <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                </div>
-            </div>
-        </div>
-    );
-}
-
-function Team() {
-    return (
-        <div className="py-4 lg:py-28 px-0">
-            <div className="max-w-[1320px] w-full px-[0.75rem] mx-auto">
-
-                <div className="flex flex-wrap mt-0 -mx-[0.75] mb-12">
-                    <div className="w-full lg:w-[41.67%] mx-auto text-center">
-                        <h2 className="text-primary text-4xl mt-0 mb-2 font-medium leading-[1.2rem]">Our Team</h2>
+                    <div className="flex basis-auto w-full lg:w-[33.33%] mb-12 px-3">
+                        <div className="post-entry">
+                            <a href="#" className="block mb-5 text-primary "><img src="assets/muebles/mesacomedor.png" alt="Image" className="rounded-[20px] max-w-full h-auto align-middle" /></a>
+                            <div className="px-[15px]">
+                                <h3 className="text-base font-semibold mb-2 mt-0 leading-[1.2]"><a href="#" className="text-primary ">Mesa de Comedor - 6 personas</a></h3>
+                                <div className="text-sm">
+                                    <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div className="flex flex-wrap mt-0 mx-[0.75rem] text-sm leading-[28px] text-wychoose">
-
-                    {/* <!-- Start Column 1 --> */}
-                    <div className="w-full lg:w-1/4 mb-12 lg:mb-0 px-[0.5rem]">
-                        <img src="assets/person_1.jpg" className="max-w-full h-auto mb-12 align-middle" />
-                        <h3 className="text-[1.75rem] mt-0 mb-2 font-medium leading-[1.2rem]"><a href="#" className="text-primary underline"><span className="">Lawson</span> Arnold</a></h3>
-                        <span className="block mb-6">CEO, Founder, Atty.</span>
-                        <p className="mt-0 mb-0 lg:mb-4">Separated they live in.
-                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <p className="mb-0 mt-0"><a href="#" className="font-semibold underline text-primary">Leer más <span className=""></span></a></p>
+                    <div className="flex basis-auto w-full lg:w-[33.33%] mb-12 px-3">
+                        <div className="post-entry">
+                            <a href="#" className="block mb-5 text-primary "><img src="assets/muebles/blog/post2.png" alt="Image" className="rounded-[20px] max-w-full h-auto align-middle" /></a>
+                            <div className="px-[15px]">
+                                <h3 className="text-base font-semibold mb-2 mt-0 leading-[1.2]"><a href="#" className="text-primary ">Armario Para Sala o Comedor</a></h3>
+                                <div className="text-sm">
+                                    <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    {/* <!-- End Column 1 --> */}
 
-                    {/* <!-- Start Column 2 --> */}
-                    <div className="w-full lg:w-1/4 mb-12 lg:mb-0 px-[0.5rem]">
-                        <img src="assets/person_2.jpg" className="max-w-full h-auto mb-12 align-middle" />
-
-                        <h3 className="text-[1.75rem] mt-0 mb-2 font-medium leading-[1.2rem]"><a href="#" className="text-primary underline"><span className="">Jeremy</span> Walker</a></h3>
-                        <span className="block mb-6">CEO, Founder, Atty.</span>
-                        <p className="mt-0 mb-0 lg:mb-4">Separated they live in.
-                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <p className="mb-0 mt-0"><a href="#" className="font-semibold underline text-primary">Learn More <span className=""></span></a></p>
-
+                    <div className="flex basis-auto w-full lg:w-[33.33%] mb-12 px-3">
+                        <div className="post-entry">
+                            <a href="#" className="block mb-5 text-primary "><img src="assets/muebles/blog/post3.png" alt="Image" className="rounded-[20px] max-w-full h-auto align-middle" /></a>
+                            <div className="px-[15px]">
+                                <h3 className="text-base font-semibold mb-2 mt-0 leading-[1.2]"><a href="#" className="text-primary ">Mueble Decorativo de Sala</a></h3>
+                                <div className="text-sm">
+                                    <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    {/* <!-- End Column 2 --> */}
 
-                    {/* <!-- Start Column 3 --> */}
-                    <div className="w-full lg:w-1/4 mb-12 lg:mb-0 px-[0.5rem]">
-                        <img src="assets/person_3.jpg" className="max-w-full h-auto mb-12 align-middle" />
-                        <h3 className="text-[1.75rem] mt-0 mb-2 font-medium leading-[1.2rem]"><a href="#" className="text-primary underline"><span className="">Patrik</span> White</a></h3>
-                        <span className="block mb-6">CEO, Founder, Atty.</span>
-                        <p className="mt-0 mb-0 lg:mb-4">Separated they live in.
-                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <p className="mb-0 mt-0"><a href="#" className="font-semibold underline text-primary">Learn More <span className=""></span></a></p>
+                    <div className="flex basis-auto w-full lg:w-[33.33%] mb-12 px-3">
+                        <div className="post-entry">
+                            <a href="#" className="block mb-5 text-primary "><img src="assets/muebles/blog/post4.png" alt="Image" className="rounded-[20px] max-w-full h-auto align-middle" /></a>
+                            <div className="px-[15px]">
+                                <h3 className="text-base font-semibold mb-2 mt-0 leading-[1.2]"><a href="#" className="text-primary ">Estante para Tv - estilo moderno</a></h3>
+                                <div className="text-sm">
+                                    <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    {/* <!-- End Column 3 --> */}
 
-                    {/* <!-- Start Column 4 --> */}
-                    <div className="w-full lg:w-1/4 mb-12 lg:mb-0 px-[0.5rem]">
-                        <img src="assets/person_4.jpg" className="max-w-full h-auto mb-12 align-middle" />
-
-                        <h3 className="text-[1.75rem] mt-0 mb-2 font-medium leading-[1.2rem]"><a href="#" className="text-primary underline"><span className="">Kathryn</span> Ryan</a></h3>
-                        <span className="block mb-6">CEO, Founder, Atty.</span>
-                        <p className="mt-0 mb-0 lg:mb-4">Separated they live in.
-                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <p className="mb-0 mt-0"><a href="#" className="font-semibold underline text-primary">Learn More <span className=""></span></a></p>
-
-
+                    <div className="flex basis-auto w-full lg:w-[33.33%] mb-12 px-3">
+                        <div className="post-entry">
+                            <a href="#" className="block mb-5 text-primary "><img src="assets/muebles/blog/post5.png" alt="Image" className="rounded-[20px] max-w-full h-auto align-middle" /></a>
+                            <div className="px-[15px]">
+                                <h3 className="text-base font-semibold mb-2 mt-0 leading-[1.2]"><a href="#" className="text-primary ">Juego de Sala o Comedor - 4 personas</a></h3>
+                                <div className="text-sm">
+                                    <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    {/* <!-- End Column 4 --> */}
+
+                    <div className="flex basis-auto w-full lg:w-[33.33%] mb-12 px-3">
+                        <div className="post-entry">
+                            <a href="#" className="block mb-5 text-primary "><img src="assets/muebles/blog/post6.png" alt="Image" className="rounded-[20px] max-w-full h-auto align-middle" /></a>
+                            <div className="px-[15px]">
+                                <h3 className="text-base font-semibold mb-2 mt-0 leading-[1.2]"><a href="#" className="text-primary ">Zapatera de Madera Blanca</a></h3>
+                                <div className="text-sm">
+                                    <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex basis-auto w-full lg:w-[33.33%] mb-12 px-3">
+                        <div className="post-entry">
+                            <a href="#" className="block mb-5 text-primary "><img src="assets/muebles/blog/post7.png" alt="Image" className="rounded-[20px] max-w-full h-auto align-middle" /></a>
+                            <div className="px-[15px]">
+                                <h3 className="text-base font-semibold mb-2 mt-0 leading-[1.2]"><a href="#" className="text-primary ">Muebles de cocina - hermosos acabados</a></h3>
+                                <div className="text-sm">
+                                    <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -203,7 +186,7 @@ function Testimonials() {
                                 <div className="absolute -left-[10000em]" aria-live="polite" aria-atomic="true">slide <span className="current">2</span>  of 3</div>
                                 <div id="tns1-mw" className="overflow-hidden">
                                     <div className="pt-8" id="tns1-iw">
-                                        <div className="tns-carousel whitespace-nowrap w-[500%] transition-products" id="tns1">
+                                        <div className="tns-carousel whitespace-nowrap w-[500%] transition-products" id="tns1" >
 
                                             <div className="w-[20%] text-sm inline-block align-top whitespace-normal" aria-hidden="true" >
                                                 <div className="justify-center flex flex-wrap mt-0 lg:-mx-[0.75rem] mx-0">
@@ -330,16 +313,14 @@ function Testimonials() {
     );
 }
 
-export default function nosotros() {
+export default function Blog() {
     return (
         <>
             <Banner />
 
-            <WhyChoose />
+            <BlogSection />
 
-            {/* <Team />
-
-            <Testimonials /> */}
+            {/* <Testimonials /> */}
         </>
     );
-};
+}
