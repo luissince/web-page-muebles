@@ -78,7 +78,7 @@ const NavbarDesktop = () => {
                             </a>
                         </li>
                         <li className="ml-4">
-                            <a className="font-medium text-white relative" href="cart.html">
+                            <a className="font-medium text-white relative" href="#">
                                 <img src="assets/cart.svg" />
                             </a>
                         </li>
@@ -116,7 +116,7 @@ const NavbarMobile = () => {
                     <li className="my-3"><Link className="opacity-50" href="nosotros" onClick={toggleMenu}>Nosotros</Link></li>
                     <li className="my-3"><Link className="opacity-50" href="services" onClick={toggleMenu}>Servicios</Link></li>
                     <li className="my-3"><Link className="opacity-50" href="blog" onClick={toggleMenu}>Blog</Link></li>
-                    <li className="my-3"><Link className="opacity-50" href="contact" onClick={toggleMenu}>Contactanos</Link></li>
+                    <li className="my-3"><Link className="opacity-50" href="contact" onClick={toggleMenu}>Contáctanos</Link></li>
                 </ul>
 
                 <ul className="flex flex-row text-lg font-medium text-white">
@@ -126,7 +126,7 @@ const NavbarMobile = () => {
                         </a>
                     </li>
                     <li className="my-3">
-                        <a className="relative" href="cart.html">
+                        <a className="relative" href="#">
                             <img src="assets/cart.svg" />
                         </a>
                     </li>

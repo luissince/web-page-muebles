@@ -137,7 +137,7 @@ function Products() {
 
           {/* <!-- Start Column 1 --> */}
           <div className="w-full lg:w-1/4 mb-0">
-            <h2 className="mb-6 text-2xl mt-0 font-medium leading-[1.2] text-primary text-center lg:text-left">Elaborado con excelete material.</h2>
+            <h2 className="mb-6 text-2xl mt-0 font-medium leading-[1.2] text-primary text-center lg:text-left">Elaborado con excelente material.</h2>
             <p className="mb-6 mt-0 text-center lg:text-left">
               Nuestros productos destacan por estar fabricados con las mejores maderas, garantizando una calidad superior y un acabado impecable. Cada detalle refleja nuestro compromiso con la excelencia en la creación de muebles duraderos y visualmente atractivos.
             </p>
@@ -154,7 +154,7 @@ function Products() {
           {/* <!-- End Column 3 --> */}
 
           {/* <!-- Start Column 4 --> */}
-          <Item image={"assets/muebles/armario_tv.png"} name={"Roperro 3 Puertas"} price={"00.00"} />
+          <Item image={"assets/muebles/armario_tv.png"} name={"Ropero 3 Puertas"} price={"00.00"} />
           {/* <!-- End Column 4 --> */}
 
         </div>
@@ -169,7 +169,7 @@ function WhyChoose() {
       <div className="max-w-[1320px] mr-auto ml-auto">
         <div className="flex flex-wrap mt-[0] lg:mr-[0.75] lg:ml-[0.75px] xs:mx-3 justify-between">
           <div className="lg:w-1/2 w-full">
-            <h2 className="text-primary text-[2rem] mt-0 mb-6 lg:mb-3 font-medium leading-[1.2] text-center lg:text-left">Por que Escogernos</h2>
+            <h2 className="text-primary text-[2rem] mt-0 mb-6 lg:mb-3 font-medium leading-[1.2] text-center lg:text-left">Por que escogernos</h2>
             <p className="mt-0 mb-4 text-center lg:text-left lg:mr-3">
               En nuestro compromiso con la calidad y la excelencia, todos nuestros productos están
               meticulosamente confeccionados utilizando maderas de la más alta calidad. Cada pieza es creada con esmero, asegurando no solo la
@@ -259,17 +259,17 @@ function WeHelp() {
               Nuestra misión es ser un recurso confiable y accesible, proporcionando información clara y valiosa para que nuestros clientes tomen decisiones informadas y se sientan seguros en cada paso de su proceso.
             </p>
 
-            <ul className="pl-0 list-none w-full mt-12 lg:mt-6 mb-6 text-center lg:text-left">
-              <li className="inline-block w-[45%] mb-3 leading-6 relative pl-2 lg:pl-5 after:w-2 after:h-2 after:rounded-[50%] after:border-2 after:border-solid after:border-weHelp after:absolute after:left-0 after:top-2 mx-2 lg:mx-0" style={{ width: "calc(50%-20px)" }}>
+            <ul className="pl-0 list-none w-full mt-12 lg:mt-6 mb-6 text-left lg:text-left">
+              <li className="text-sm inline-block w-[45%] mb-3 leading-6 relative pl-4 lg:pl-5 after:w-2 after:h-2 after:rounded-[50%] after:border-2 after:border-solid after:border-weHelp after:absolute after:left-0 after:top-2 mx-2 lg:mx-0" style={{ width: "50%-20px" }}>
                 Funcionalidad y Uso que perdura en el tiempo
               </li>
-              <li className="inline-block w-[45%] mb-3 leading-6 relative pl-2 lg:pl-5 after:w-2 after:h-2 after:rounded-[50%] after:border-2 after:border-solid after:border-weHelp after:absolute after:left-0 after:top-2 mx-2 lg:mx-0" style={{ width: "50%-20px" }}>
+              <li className="text-sm inline-block w-[45%] mb-3 leading-6 relative pl-4 lg:pl-5 after:w-2 after:h-2 after:rounded-[50%] after:border-2 after:border-solid after:border-weHelp after:absolute after:left-0 after:top-2 mx-2 lg:mx-0" style={{ width: "50%-20px" }}>
                 Calidad de los Materiales y Construcción
               </li>
-              <li className="inline-block w-[45%] mb-3 leading-6 relative pl-2 lg:pl-5 after:w-2 after:h-2 after:rounded-[50%] after:border-2 after:border-solid after:border-weHelp after:absolute after:left-0 after:top-2 mx-2 lg:mx-0" style={{ width: "50%-20px" }}>
+              <li className="text-sm inline-block w-[45%] mb-3 leading-6 relative pl-4 lg:pl-5 after:w-2 after:h-2 after:rounded-[50%] after:border-2 after:border-solid after:border-weHelp after:absolute after:left-0 after:top-2 mx-2 lg:mx-0" style={{ width: "50%-20px" }}>
                 Estilo moderno y Estética de primer nivel
               </li>
-              <li className="inline-block w-[45%] mb-3 leading-6 relative pl-2 lg:pl-5 after:w-2 after:h-2 after:rounded-[50%] after:border-2 after:border-solid after:border-weHelp after:absolute after:left-0 after:top-2 mx-2 lg:mx-0" style={{ width: "50%-20px" }}>
+              <li className="text-sm inline-block w-[45%] mb-3 leading-6 relative pl-4 lg:pl-5 after:w-2 after:h-2 after:rounded-[50%] after:border-2 after:border-solid after:border-weHelp after:absolute after:left-0 after:top-2 mx-2 lg:mx-0" style={{ width: "50%-20px" }}>
                 Presupuesto y Relación Calidad-Precio
               </li>
             </ul>
@@ -295,8 +295,8 @@ function PopularProduct() {
                 <img src="assets/muebles/banquito.png" alt="Image" className="max-w-full h-auto align-middle" />
               </div>
               <div className="pt-4">
-                <h3 className="text-sm font-bold text-primary mt-0 mb-2 leading-[1.2]">Banquillo - mmodel 1</h3>
-                <p className="leading-[1.4] mb-[10px] text-sm mt-0">Elaborado con madera de la m+as alta calidad para interiores o exteriores</p>
+                <h3 className="text-sm font-bold text-primary mt-0 mb-2 leading-[1.2]">Banquillo - model 1</h3>
+                <p className="leading-[1.4] mb-[10px] text-sm mt-0">Elaborado con madera de la más alta calidad para interiores o exteriores</p>
                 <p className="leading-[1.4] mb-[10px] text-sm mt-0">
                   <a href="#" className="text-primary">Leer más</a>
                 </p>

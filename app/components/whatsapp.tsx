@@ -55,7 +55,7 @@ export default function Whatsapp() {
                             <i className="bi bi-person-circle"></i>
                         </div>
                         <div className='pl-4 py-3 text-slate-700 opacity-90'>
-                            <a>Hola, ¿en que podemos ayudarle?</a>
+                            <a>Hola, ¿En qué podemos ayudarle?</a>
                         </div>
                     </div>
                     <div className='flex flex-wrap items-center'>

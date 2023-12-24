@@ -214,7 +214,7 @@ function Products() {
 
           {/* <!-- Start Column 1 --> */}
           <div className="w-full lg:w-1/4 mb-0">
-            <h2 className="mb-6 text-2xl mt-0 font-medium leading-[1.2] text-primary text-center lg:text-left">Elaborado con excelete material.</h2>
+            <h2 className="mb-6 text-2xl mt-0 font-medium leading-[1.2] text-primary text-center lg:text-left">Elaborado con excelente material.</h2>
             <p className="mb-6 mt-0 text-center lg:text-left">
               Nuestros productos destacan por estar fabricados con las mejores maderas, garantizando una calidad superior y un acabado impecable. Cada detalle refleja nuestro compromiso con la excelencia en la creación de muebles duraderos y visualmente atractivos.
             </p>
@@ -231,7 +231,7 @@ function Products() {
           {/* <!-- End Column 3 --> */}
 
           {/* <!-- Start Column 4 --> */}
-          <Item image={"assets/muebles/armario_tv.png"} name={"Roperro 3 Puertas"} price={"00.00"} />
+          <Item image={"assets/muebles/armario_tv.png"} name={"Ropero 3 Puertas"} price={"00.00"} />
           {/* <!-- End Column 4 --> */}
 
         </div>

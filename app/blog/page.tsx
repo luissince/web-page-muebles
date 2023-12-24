@@ -35,7 +35,7 @@ function Banner() {
 
 function BlogSection() {
     return (
-        <div className="pt-28 pr-0 lg:pb-48 pb-10 pl-0">
+        <div className="pt-28 pr-0 lg:pb-48 pb-20 pl-0">
             <div className="max-w-[1320px] mx-auto w-full">
                 <div className="flex flex-wrap mt-0">
 

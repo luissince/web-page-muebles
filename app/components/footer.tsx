@@ -202,11 +202,11 @@ export default function Footer() {
         <div className="flex flex-wrap mt-0 -mx-3 gap-x-6 gap-y-0 pt-24 xs:mx-2 lg:mx-2">
           <div className="w-[66.67%] max-w-full px-[0.75rem] xs:w-full">
             <div className="mt-0 mb-20 relative z-[2]">
-              <h3 className="flex items-center text-footer text-lg font-medium mt-0 mb-2 leading-[1.2]">
+              <h3 className="flex items-center text-footer text-lg font-medium mt-6 lg:mt-0 mb-2 leading-[1.2]">
                 <span className="mr-1">
                   <img src="assets/envelope-outline.svg" alt="Image" className="max-w-[380px] h-auto align-middle" />
                 </span>
-                <span>Subscribete a las ultimas noticias</span>
+                <span>Subscríbete a las últimas noticias</span>
               </h3>
 
               <form action="#" className="flex flex-wrap mt-0 -mx-3">

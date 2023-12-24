@@ -62,7 +62,8 @@ function Content() {
                                 </div>
 
                                 <div className="w-full lg:w-[33.33%] px-[0.75rem]" >
-                                    <a href="mailto:rahamsiscg.95@gmail.com" target="_blank">
+                                    {/* <a href="mailto:rahamsiscg.95@gmail.com" target="_blank"> */}
+                                    <a href="#">
                                         <div className="leading-[1.5] items-center flex" data-aos="fade-left" data-aos-delay="0">
                                             <div className="rounded-[10px] flex basis-[50px] h-[50px] leading-[50px] items-center bg-greenBanner mr-5 text-white mb-6">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-envelope-fill mx-auto" viewBox="0 0 16 16">

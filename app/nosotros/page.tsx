@@ -39,7 +39,7 @@ function WhyChoose() {
             <div className="max-w-[1320px] mx-auto">
                 <div className="flex flex-wrap mt-[0] lg:mr-[0.75px] lg:ml-[0.75px] xs:mx-3 justify-between">
                     <div className="lg:w-1/2 w-full">
-                        <h2 className="text-primary text-[2rem] mt-0 mb-6 lg:mb-3 font-medium leading-[1.2] text-center lg:text-left">Por que Escogernos</h2>
+                        <h2 className="text-primary text-[2rem] mt-0 mb-6 lg:mb-3 font-medium leading-[1.2] text-center lg:text-left">Por que escogernos</h2>
                         <p className="mt-0 mb-4 text-center lg:text-left lg:mr-3">
                             En nuestro compromiso con la calidad y la excelencia, todos nuestros productos están
                             meticulosamente confeccionados utilizando maderas de la más alta calidad. Cada pieza es creada con esmero, asegurando no solo la
