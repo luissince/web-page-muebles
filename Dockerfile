@@ -1,31 +1,24 @@
-FROM node:18-alpine as builder
+FROM node:18-alpine AS builder
 
-# Create app directory
 WORKDIR /app
 
-# Install app dependencies
 COPY package*.json ./
+RUN npm ci --only=production
 
-RUN npm install
-
-# Copy app source code
 COPY . .
+RUN npm run build
 
-# Build static assets
-RUN npm run build && npm run export
+FROM node:18-alpine AS runner
 
-FROM nginx:1.25.3-alpine-slim
+WORKDIR /app
 
-# Copy static assets from builder stage
-COPY --chown=nginx:nginx --from=builder /app/out /usr/share/nginx/html
+ENV NODE_ENV=production
 
-RUN chown -R nginx:nginx /var/cache/nginx && \
-    chown -R nginx:nginx /var/log/nginx && \
-    chown -R nginx:nginx /etc/nginx/conf.d
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/package.json ./package.json
 
-RUN touch /var/run/nginx.pid && \
-        chown -R nginx:nginx /var/run/nginx.pid
-
-USER nginx
+RUN npm ci --only=production
 
 EXPOSE 80
+
+CMD ["npm", "start"]
