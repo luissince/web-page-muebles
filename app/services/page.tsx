@@ -53,13 +53,15 @@ function Item(props: Props) {
   const btnCotizar = useRef<HTMLParagraphElement>(null);
 
   const addElementsProduct = () => {
-    imgProduct.current?.classList.add('opacity-100', '-top-9')
+    imgProduct.current?.classList.remove('translate-y-0')
+    imgProduct.current?.classList.add('opacity-100', '-translate-y-10')
     background.current?.classList.add('transform', 'opacity-100', 'scale-y-100')
     btnPlus.current?.classList.add('translate-y-1/2', 'duration-500', 'opacity-100')
   };
 
   const quitElementsProduct = () => {
-    imgProduct.current?.classList.remove('opacity-100', '-top-9')
+    imgProduct.current?.classList.remove('opacity-100', '-translate-y-10')
+    imgProduct.current?.classList.add('translate-y-0')
     background.current?.classList.remove('transform', 'opacity-100', 'scale-y-100')
     btnPlus.current?.classList.remove('translate-y-1/2', 'duration-500', 'opacity-100')
   };
@@ -86,7 +88,7 @@ function Item(props: Props) {
         {/* fondo */}
         <span ref={background} className="w-full bottom-0 left-0 h-3/4 bg-products absolute rounded-[10px] transition-all duration-500 ease-in-out origin-bottom scale-y-0 opacity-0 "></span>
         {/* imagen */}
-        <img ref={imgProduct} src={props.image} className="max-w-full h-auto align-middle mb-[30px] relative top-0 ease-in-out duration-500 translate-y-0" />
+        <img ref={imgProduct} src={props.image} className="max-w-full h-auto align-middle mb-[30px] top-0 relative transform transition-all duration-500 ease-in-out" />
         {/* texto */}
         <h3 ref={nameProduct} className="text-primary font-semibold text-base leading-5 mb-2 mt-0 relative">{props.name}</h3>
         <h3 ref={description} className="hidden text-primary h-[70px] -mt-[15px] text-center text-base leading-5 mb-2 relative">
@@ -120,7 +122,7 @@ function Content() {
                 <img src="assets/truck.svg" alt="Image" className="align-middle " />
               </div>
               <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-5">Entrega Rápida</h3>
-              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4">Disfruta de la comodidad de recibir tus muebles de alta calidad de manera rápida y eficiente. Nuestro servicio de envío rápido
+              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4 mx-1">Disfruta de la comodidad de recibir tus muebles de alta calidad de manera rápida y eficiente. Nuestro servicio de envío rápido
                 garantiza que tus piezas seleccionadas lleguen a tu puerta en el menor tiempo posible, para que puedas disfrutar de tu nuevo mobiliario sin demoras</p>
             </div>
           </div>
@@ -131,7 +133,7 @@ function Content() {
                 <img src="assets/bag.svg" alt="Image" className="align-middle" />
               </div>
               <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-5">Cotización Sencilla</h3>
-              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4">Simplificamos el proceso de cotización para que puedas obtener rápidamente un presupuesto personalizado. Nuestro sistema fácil de usar
+              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4 mx-1">Simplificamos el proceso de cotización para que puedas obtener rápidamente un presupuesto personalizado. Nuestro sistema fácil de usar
                 te permite seleccionar tus muebles preferidos y recibir una cotización sin complicaciones. Obtén precios transparentes y descubre cómo hacer realidad tus proyectos de decoración nunca fue tan sencillo.</p>
             </div>
           </div>
@@ -142,7 +144,7 @@ function Content() {
                 <img src="assets/support.svg" alt="Image" className="align-middle" />
               </div>
               <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-5">Atención Ininterrumpida</h3>
-              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4">Estamos aquí para ti las 24 horas del día, los 7 días de la semana. Nuestro equipo de atención al cliente está disponible para responder tus
+              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4 mx-1">Estamos aquí para ti las 24 horas del día, los 7 días de la semana. Nuestro equipo de atención al cliente está disponible para responder tus
                 preguntas, brindarte asesoramiento experto y garantizar una experiencia de compra sin contratiempos. Tu comodidad y satisfacción son nuestra prioridad en cualquier momento del día.</p>
             </div>
           </div>
@@ -153,7 +155,7 @@ function Content() {
                 <img src="assets/return.svg" alt="Image" className="align-middle" />
               </div>
               <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-5">Servicio de Armado Incluido</h3>
-              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4">Simplificamos tu experiencia de compra al ofrecer servicio de armado profesional de muebles de forma gratuita. Con nosotros, no te
+              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4 mx-1">Simplificamos tu experiencia de compra al ofrecer servicio de armado profesional de muebles de forma gratuita. Con nosotros, no te
                 preocuparás por ensamblar tus nuevos muebles, ya que nuestro equipo capacitado se encargará de todo. Disfruta de la comodidad de recibir tus muebles listos para usar, sin complicaciones ni esfuerzos
                 adicionales.</p>
             </div>
@@ -165,7 +167,7 @@ function Content() {
                 <img src="assets/truck.svg" alt="Image" className="align-middle " />
               </div>
               <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-5">Fast &amp; Free Shipping</h3>
-              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4 mx-1">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
             </div>
           </div>
 
@@ -175,7 +177,7 @@ function Content() {
                 <img src="assets/bag.svg" alt="Image" className="align-middle" />
               </div>
               <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-5">Easy to Shop</h3>
-              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4 mx-1">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
             </div>
           </div>
 
@@ -185,7 +187,7 @@ function Content() {
                 <img src="assets/support.svg" alt="Image" className="align-middle" />
               </div>
               <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-5">24/7 Support</h3>
-              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4 mx-1">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
             </div>
           </div>
 
@@ -195,7 +197,7 @@ function Content() {
                 <img src="assets/return.svg" alt="Image" className="align-middle" />
               </div>
               <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-5">Hassle Free Returns</h3>
-              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+              <p className="text-sm leading-[22px] text-wychoose mt-0 mb-4 mx-1">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
             </div>
           </div> */}
         </div>

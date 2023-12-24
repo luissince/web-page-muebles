@@ -52,8 +52,9 @@ function WhyChoose() {
                                     <div className="inline-block relative mb-5">
                                         <img src="assets/truck.svg" alt="Image" className="imf-fluid" />
                                     </div>
-                                    <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Fast &amp; Free Shipping</h3>
-                                    <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                                    <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Entrega Rápida</h3>
+                                    <p className="text-sm leading-6 text-wychoose mt-0 mb-4 mx-1">Recibie tus muebles de alta calidad de manera rápida y eficiente. Nuestro servicio de envío rápido
+                                        garantiza que tus piezas seleccionadas lleguen a tu puerta en el menor tiempo posible.</p>
                                 </div>
                             </div>
 
@@ -62,8 +63,9 @@ function WhyChoose() {
                                     <div className="inline-block relative mb-5">
                                         <img src="assets/bag.svg" alt="Image" className="imf-fluid" />
                                     </div>
-                                    <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Easy to Shop</h3>
-                                    <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                                    <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Cotización Sencilla</h3>
+                                    <p className="text-sm leading-6 text-wychoose mt-0 mb-4 mx-1">Simplificamos el proceso de cotización para que puedas obtener rápidamente un presupuesto personalizado. Obtén precios transparentes y descubre
+                                        cómo hacer realidad tus proyectos de decoración nunca fue tan sencillo.</p>
                                 </div>
                             </div>
 
@@ -72,8 +74,9 @@ function WhyChoose() {
                                     <div className="inline-block relative mb-5">
                                         <img src="assets/support.svg" alt="Image" className="imf-fluid" />
                                     </div>
-                                    <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">24/7 Support</h3>
-                                    <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                                    <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Atención Ininterrumpida</h3>
+                                    <p className="text-sm leading-6 text-wychoose mt-0 mb-4 mx-1">Nuestro equipo de atención al cliente está disponible para responder tus
+                                        preguntas, brindarte asesoramiento experto y garantizar una experiencia de compra sin contratiempos</p>
                                 </div>
                             </div>
 
@@ -82,8 +85,8 @@ function WhyChoose() {
                                     <div className="inline-block relative mb-5">
                                         <img src="assets/return.svg" alt="Image" className="imf-fluid" />
                                     </div>
-                                    <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Hassle Free Returns</h3>
-                                    <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                                    <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Servicio de Armado Incluido</h3>
+                                    <p className="text-sm leading-6 text-wychoose mt-0 mb-4 mx-1">Con nosotros, no te preocuparás por ensamblar tus nuevos muebles, ya que nuestro equipo capacitado se encargará de todo. </p>
                                 </div>
                             </div>
 

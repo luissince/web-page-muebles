@@ -51,13 +51,15 @@ function Item(props: Props) {
     const btnCotizar = useRef<HTMLParagraphElement>(null);
 
     const addElementsProduct = () => {
-        imgProduct.current?.classList.add('opacity-100', '-top-9')
+        imgProduct.current?.classList.remove('translate-y-0')
+        imgProduct.current?.classList.add('opacity-100', '-translate-y-10')
         background.current?.classList.add('transform', 'opacity-100', 'scale-y-100')
         btnPlus.current?.classList.add('translate-y-1/2', 'duration-500', 'opacity-100')
     };
 
     const quitElementsProduct = () => {
-        imgProduct.current?.classList.remove('opacity-100', '-top-9')
+        imgProduct.current?.classList.remove('opacity-100', '-translate-y-10')
+        imgProduct.current?.classList.add('translate-y-0')
         background.current?.classList.remove('transform', 'opacity-100', 'scale-y-100')
         btnPlus.current?.classList.remove('translate-y-1/2', 'duration-500', 'opacity-100')
     };
@@ -84,7 +86,7 @@ function Item(props: Props) {
                 {/* fondo */}
                 <span ref={background} className="w-full bottom-0 left-0 h-3/4 bg-products absolute rounded-[10px] transition-all duration-500 ease-in-out origin-bottom scale-y-0 opacity-0 "></span>
                 {/* imagen */}
-                <img ref={imgProduct} src={props.image} className="max-w-full h-auto align-middle mb-[30px] relative top-0  ease-in-out duration-500 translate-y-0" />
+                <img ref={imgProduct} src={props.image} className="max-w-full h-auto align-middle mb-[30px] top-0 relative transform transition-all duration-500 ease-in-out" />
                 {/* texto */}
                 <h3 ref={nameProduct} className="text-primary font-semibold text-base leading-5 mb-2 mt-0 relative">{props.name}</h3>
                 {/* description */}
