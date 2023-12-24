@@ -1,5 +1,6 @@
 'use client'
 import { useRef, useState } from "react";
+import Link from "next/link";
 
 function Banner() {
     return (
@@ -44,37 +45,60 @@ interface Props {
 function Item(props: Props) {
     const imgProduct = useRef<HTMLImageElement>(null);
     const btnPlus = useRef<HTMLSpanElement>(null);
-    const bckgPrueba = useRef<HTMLButtonElement>(null);
+    const background = useRef<HTMLButtonElement>(null);
+    const description = useRef<HTMLHeadingElement>(null);
+    const nameProduct = useRef<HTMLHeadingElement>(null);
+    const btnCotizar = useRef<HTMLParagraphElement>(null);
 
     const addElementsProduct = () => {
-        imgProduct.current?.classList.add('ease-in-out', 'duration-500', 'translate-y-0', 'opacity-100', '-top-7')
-        bckgPrueba.current?.classList.add('transform', 'opacity-100', 'scale-y-100')
+        imgProduct.current?.classList.add('opacity-100', '-top-9')
+        background.current?.classList.add('transform', 'opacity-100', 'scale-y-100')
         btnPlus.current?.classList.add('translate-y-1/2', 'duration-500', 'opacity-100')
     };
 
     const quitElementsProduct = () => {
-        imgProduct.current?.classList.remove('ease-in-out', 'duration-500', 'translate-y-0', 'opacity-100', '-top-7')
-        bckgPrueba.current?.classList.remove('transform', 'opacity-100', 'scale-y-100')
+        imgProduct.current?.classList.remove('opacity-100', '-top-9')
+        background.current?.classList.remove('transform', 'opacity-100', 'scale-y-100')
         btnPlus.current?.classList.remove('translate-y-1/2', 'duration-500', 'opacity-100')
     };
+
+    function goToContact() {
+        window.location.href = "/contact#formulario"
+    }
+
+    function showDescription() {
+        nameProduct.current?.classList.add('hidden')
+        btnCotizar.current?.classList.add('hidden')
+        description.current?.classList.remove('hidden')
+    }
+
+    const hideDescription = () => {
+        nameProduct.current?.classList.remove('hidden')
+        btnCotizar.current?.classList.remove('hidden')
+        description.current?.classList.add('hidden')
+    }
 
     return (
         <div className="w-full lg:w-1/4 mb-0 px-3 mt-11 lg:mt-0" onMouseEnter={(e) => window.innerWidth >= 480 ? addElementsProduct() : null} onMouseLeave={quitElementsProduct}>
             <button className="text-center block relative pb-[50px]  cursor-pointer bottom-0  after:absolute" >
                 {/* fondo */}
-                <span ref={bckgPrueba} className="w-full bottom-0 left-0 h-3/4 bg-products absolute rounded-[10px] transition-all duration-500 ease-in-out origin-bottom scale-y-0 opacity-0 "></span>
+                <span ref={background} className="w-full bottom-0 left-0 h-3/4 bg-products absolute rounded-[10px] transition-all duration-500 ease-in-out origin-bottom scale-y-0 opacity-0 "></span>
                 {/* imagen */}
-                <img ref={imgProduct} src={props.image} className="max-w-full h-auto align-middle mb-[30px] relative top-0 transition-products" />
+                <img ref={imgProduct} src={props.image} className="max-w-full h-auto align-middle mb-[30px] relative top-0  ease-in-out duration-500 translate-y-0" />
                 {/* texto */}
-                <h3 className="text-primary font-semibold text-base leading-5 mb-2 mt-0 relative">{props.name}</h3>
-                <strong className="text-primary font-extrabold text-lg relative">S/ {props.price}</strong>
+                <h3 ref={nameProduct} className="text-primary font-semibold text-base leading-5 mb-2 mt-0 relative">{props.name}</h3>
+                {/* description */}
+                <h3 ref={description} className="hidden text-primary h-[70px] -mt-[15px] text-center text-base leading-5 mb-2 relative">
+                    {props.name}
+                </h3>
+
+                {/* <strong className="text-primary font-extrabold text-lg relative">S/ {props.price}</strong> */}
+                <p ref={btnCotizar} className="text-center relative pt-3" onClick={goToContact}><Link href="/contact" className="font-extrabold pt-3 pr-[30px] pb-3 pl-[30px] rounded-[30px] text-primary bg-secondary border-primary">Cotizar</Link></p>
 
                 {/* boton plus */}
-                <a href="/shop">
-                    <span ref={btnPlus} className="flex absolute w-9 h-9 left-[46%] bg-primary bottom-4 mb-[-17.5px] text-center items-center rounded-[50%] transition-products opacity-0">
-                        <img src="assets/cross.svg" className="w-4 h-4 max-w-full mx-auto" />
-                    </span>
-                </a>
+                <span ref={btnPlus} onMouseEnter={showDescription} onMouseLeave={hideDescription} className="flex absolute w-9 h-9 left-[46%] bg-primary bottom-4 mb-[-17.5px] text-center items-center rounded-[50%] transition-products opacity-0">
+                    <img src="assets/cross.svg" className="w-4 h-4 max-w-full mx-auto" />
+                </span>
 
             </button>
         </div>

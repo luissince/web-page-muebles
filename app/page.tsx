@@ -48,18 +48,37 @@ function Item(props: Props) {
   const imgProduct = useRef<HTMLImageElement>(null);
   const btnPlus = useRef<HTMLSpanElement>(null);
   const background = useRef<HTMLButtonElement>(null);
+  const description = useRef<HTMLHeadingElement>(null);
+  const nameProduct = useRef<HTMLHeadingElement>(null);
+  const btnCotizar = useRef<HTMLParagraphElement>(null);
 
   const addElementsProduct = () => {
-    imgProduct.current?.classList.add('ease-in-out', 'duration-500', 'translate-y-0', 'opacity-100', '-top-7')
+    imgProduct.current?.classList.add('opacity-100', '-top-9')
     background.current?.classList.add('transform', 'opacity-100', 'scale-y-100')
     btnPlus.current?.classList.add('translate-y-1/2', 'duration-500', 'opacity-100')
   };
 
   const quitElementsProduct = () => {
-    imgProduct.current?.classList.remove('ease-in-out', 'duration-500', 'translate-y-0', 'opacity-100', '-top-7')
+    imgProduct.current?.classList.remove('opacity-100', '-top-9')
     background.current?.classList.remove('transform', 'opacity-100', 'scale-y-100')
     btnPlus.current?.classList.remove('translate-y-1/2', 'duration-500', 'opacity-100')
   };
+
+  function goToContact() {
+    window.location.href = "/contact#formulario"
+  }
+
+  function showDescription() {
+    nameProduct.current?.classList.add('hidden')
+    btnCotizar.current?.classList.add('hidden')
+    description.current?.classList.remove('hidden')
+  }
+
+  const hideDescription = () => {
+    nameProduct.current?.classList.remove('hidden')
+    btnCotizar.current?.classList.remove('hidden')
+    description.current?.classList.add('hidden')
+  }
 
   return (
     <div className="w-full lg:w-1/4 mb-0 px-3 mt-11 lg:mt-0" onMouseEnter={(e) => window.innerWidth >= 480 ? addElementsProduct() : null} onMouseLeave={quitElementsProduct}>
@@ -67,17 +86,23 @@ function Item(props: Props) {
         {/* fondo */}
         <span ref={background} className="w-full bottom-0 left-0 h-3/4 bg-products absolute rounded-[10px] transition-all duration-500 ease-in-out origin-bottom scale-y-0 opacity-0 "></span>
         {/* imagen */}
-        <img ref={imgProduct} src={props.image} className="max-w-full h-auto align-middle mb-[30px] relative top-0 transition-products" />
+        <img ref={imgProduct} src={props.image} className="max-w-full h-auto align-middle mb-[30px] top-0 relative  ease-in-out duration-500 translate-y-0" />
         {/* texto */}
-        <h3 className="text-primary font-semibold text-base leading-5 mb-2 mt-0 relative">{props.name}</h3>
-        <strong className="text-primary font-extrabold text-lg relative">S/ {props.price}</strong>
+        <h3 ref={nameProduct} className="text-primary font-semibold text-base leading-5 mb-2 mt-0 relative">{props.name}</h3>
+        {/* description */}
+        <h3 ref={description} className="hidden text-primary h-[70px] -mt-[15px] text-center text-base leading-5 mb-2 relative">
+          {props.name}
+        </h3>
+
+        {/* <strong className="text-primary font-extrabold text-lg relative">S/ {props.price}</strong> */}
+        <p ref={btnCotizar} className="text-center relative pt-3" onClick={goToContact}><Link href="/contact" className="font-extrabold pt-3 pr-[30px] pb-3 pl-[30px] rounded-[30px] text-primary bg-secondary border-primary">Cotizar</Link></p>
 
         {/* boton plus */}
-        <a href="/shop">
-          <span ref={btnPlus} className="flex absolute w-9 h-9 left-[46%] bg-primary bottom-4 mb-[-17.5px] text-center items-center rounded-[50%] transition-products opacity-0">
-            <img src="assets/cross.svg" className="w-4 h-4 max-w-full mx-auto" />
-          </span>
-        </a>
+        {/* <a href=""> */}
+        <span ref={btnPlus} onMouseEnter={showDescription} onMouseLeave={hideDescription} className="flex absolute w-9 h-9 left-[46%] bg-primary bottom-4 mb-[-17.5px] text-center items-center rounded-[50%] transition-products opacity-0">
+          <img src="assets/cross.svg" className="w-4 h-4 max-w-full mx-auto" />
+        </span>
+        {/* </a> */}
 
       </button>
     </div>
@@ -155,8 +180,9 @@ function WhyChoose() {
                   <div className="inline-block relative mb-5">
                     <img src="assets/truck.svg" alt="Image" className="imf-fluid" />
                   </div>
-                  <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Fast &amp; Free Shipping</h3>
-                  <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                  <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Entrega Rápida</h3>
+                  <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Recibie tus muebles de alta calidad de manera rápida y eficiente. Nuestro servicio de envío rápido
+                    garantiza que tus piezas seleccionadas lleguen a tu puerta en el menor tiempo posible.</p>
                 </div>
               </div>
 
@@ -165,8 +191,9 @@ function WhyChoose() {
                   <div className="inline-block relative mb-5">
                     <img src="assets/bag.svg" alt="Image" className="imf-fluid" />
                   </div>
-                  <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Easy to Shop</h3>
-                  <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                  <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Cotización Sencilla</h3>
+                  <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Simplificamos el proceso de cotización para que puedas obtener rápidamente un presupuesto personalizado. Obtén precios transparentes y descubre
+                    cómo hacer realidad tus proyectos de decoración nunca fue tan sencillo.</p>
                 </div>
               </div>
 
@@ -175,8 +202,9 @@ function WhyChoose() {
                   <div className="inline-block relative mb-5">
                     <img src="assets/support.svg" alt="Image" className="imf-fluid" />
                   </div>
-                  <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">24/7 Support</h3>
-                  <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                  <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Atención Ininterrumpida</h3>
+                  <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Nuestro equipo de atención al cliente está disponible para responder tus
+                    preguntas, brindarte asesoramiento experto y garantizar una experiencia de compra sin contratiempos</p>
                 </div>
               </div>
 
@@ -185,8 +213,8 @@ function WhyChoose() {
                   <div className="inline-block relative mb-5">
                     <img src="assets/return.svg" alt="Image" className="imf-fluid" />
                   </div>
-                  <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Hassle Free Returns</h3>
-                  <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                  <h3 className="text-sm text-primary mt-0 mb-2 font-medium leading-[1.2]">Servicio de Armado Incluido</h3>
+                  <p className="text-sm leading-6 text-wychoose mt-0 mb-4">Con nosotros, no te preocuparás por ensamblar tus nuevos muebles, ya que nuestro equipo capacitado se encargará de todo. </p>
                 </div>
               </div>
 
@@ -265,10 +293,10 @@ function PopularProduct() {
                 <img src="assets/muebles/banquito.png" alt="Image" className="max-w-full h-auto align-middle" />
               </div>
               <div className="pt-4">
-                <h3 className="text-sm font-bold text-primary mt-0 mb-2 leading-[1.2]">Nordic Chair</h3>
-                <p className="leading-[1.4] mb-[10px] text-sm mt-0">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+                <h3 className="text-sm font-bold text-primary mt-0 mb-2 leading-[1.2]">Banquillo - mmodel 1</h3>
+                <p className="leading-[1.4] mb-[10px] text-sm mt-0">Elaborado con madera de la m+as alta calidad para interiores o exteriores</p>
                 <p className="leading-[1.4] mb-[10px] text-sm mt-0">
-                  <a href="#" className="text-primary">Read More</a>
+                  <a href="#" className="text-primary">Leer más</a>
                 </p>
               </div>
             </div>
@@ -280,10 +308,10 @@ function PopularProduct() {
                 <img src="assets/muebles/silla1.png" alt="Image" className="max-w-full h-auto align-middle" />
               </div>
               <div className="pt-4">
-                <h3 className="text-sm font-bold text-primary mt-0 mb-2 leading-[1.2]">Kruzo Aero Chair</h3>
-                <p className="leading-[1.4] mb-[10px] text-sm mt-0">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+                <h3 className="text-sm font-bold text-primary mt-0 mb-2 leading-[1.2]">Silla - model 2</h3>
+                <p className="leading-[1.4] mb-[10px] text-sm mt-0">Silla de madera con base tapizada hecha en color a la preferencia</p>
                 <p className="leading-[1.4] mb-[10px] text-sm mt-0">
-                  <a href="#" className="text-primary">Read More</a>
+                  <a href="#" className="text-primary">Leer más</a>
                 </p>
               </div>
             </div>
@@ -295,10 +323,10 @@ function PopularProduct() {
                 <img src="assets/muebles/silla2.png" alt="Image" className="max-w-full h-auto align-middle" />
               </div>
               <div className="pt-4">
-                <h3 className="text-sm font-bold text-primary mt-0 mb-2 leading-[1.2]">Ergonomic Chair</h3>
-                <p className="leading-[1.4] mb-[10px] text-sm mt-0">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+                <h3 className="text-sm font-bold text-primary mt-0 mb-2 leading-[1.2]">Silla - model 3</h3>
+                <p className="leading-[1.4] mb-[10px] text-sm mt-0">Silla de madera con base y respaldar tapizada hecha en color a la preferencia</p>
                 <p className="leading-[1.4] mb-[10px] text-sm mt-0">
-                  <a href="#" className="text-primary">Read More</a>
+                  <a href="#" className="text-primary">Leer más</a>
                 </p>
               </div>
             </div>
@@ -491,7 +519,7 @@ function BlogSection() {
               <div className="px-[15px]">
                 <h3 className="text-base font-semibold mb-2 mt-0 leading-[1.2]"><a href="#" className="text-primary ">Cama para Dormitorio de 2 Plazas</a></h3>
                 <div className="text-sm">
-                <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
+                  <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
                 </div>
               </div>
             </div>
@@ -503,7 +531,7 @@ function BlogSection() {
               <div className="px-[15px]">
                 <h3 className="text-base font-semibold mb-2 mt-0 leading-[1.2]"><a href="#" className="text-primary ">Mesa de Centro, diseño futurista</a></h3>
                 <div className="text-sm">
-                <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
+                  <span><a href="#" className="font-semibold text-primary">Nota: </a></span> <span>Todas las imágenes son referenciales</span>
                 </div>
               </div>
             </div>

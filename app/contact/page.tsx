@@ -42,7 +42,7 @@ function Content() {
 
                         <div className="w-full lg:w-[66.67%] pb-[1.5rem] px-[0.75rem]">
 
-                            <div className="flex flex-wrap mt-0 mx-[-0.75rem] mb-12">
+                            <div className="flex flex-wrap mt-0 mx-[-0.75rem] mb-12" id="formulario">
                                 <div className="w-full lg:w-[33.33%] px-[0.75rem]">
                                     <a href="https://maps.app.goo.gl/5raavVWzFBJjWfzE8" target="_blank">
                                         <div className="leading-[1.5rem] items-center flex " data-aos="fade-left" data-aos-delay="0">
@@ -99,24 +99,28 @@ function Content() {
                                 </div>
                             </div>
 
+                            <div className="blockp mt-0 mb-12">
+                                <p>Recuerda que puedes hacer tu cotización en el formulario de abajo o escribiendonos por <span className="font-bold"> Whatsapp</span> en el botón verde.</p>
+                            </div>
+
                             <form className="block mt-0">
                                 <div className="flex flex-wrap mt-0">
                                     <div className="w-1/2 pr-3">
                                         <div className="form-group">
                                             <label className="text-black inline-block">Nombre</label>
-                                            <input type="text" className="form-control h-[50px] rounded-xl font-serif block w-full my-1 px-[0.75rem] text-base font-normal leading-[1.5] text-imputFootr bg-white bg-clip-padding border border-solid border-borderInputFooter appearance-none m-0" id="fname" />
+                                            <input type="text" className="form-control h-[50px] rounded-xl font-serif block w-full my-1 px-[0.75rem] text-base font-normal leading-[1.5] text-imputFootr bg-white bg-clip-padding border border-solid border-borderInputFooter appearance-none m-0" id="fname" placeholder="Ingrese su nombre" />
                                         </div>
                                     </div>
                                     <div className="w-1/2 pl-3">
                                         <div className="form-group">
                                             <label className="text-black inline-block">Apellidos</label>
-                                            <input type="text" className="form-control h-[50px] rounded-xl font-serif block w-full my-1 px-[0.75rem] text-base font-normal leading-[1.5] text-imputFootr bg-white bg-clip-padding border border-solid border-borderInputFooter appearance-none m-0" id="lname" />
+                                            <input type="text" className="form-control h-[50px] rounded-xl font-serif block w-full my-1 px-[0.75rem] text-base font-normal leading-[1.5] text-imputFootr bg-white bg-clip-padding border border-solid border-borderInputFooter appearance-none m-0" id="lname" placeholder="Ingrese su(s) apellido(s)" />
                                         </div>
                                     </div>
                                 </div>
                                 <div className="form-group py-2">
                                     <label className="text-black inline-block">Su correo</label>
-                                    <input type="email" className="form-control h-[50px] rounded-xl font-serif block w-full my-1 px-[0.75rem] text-base font-normal leading-[1.5] text-imputFootr bg-white bg-clip-padding border border-solid border-borderInputFooter appearance-none m-0" id="email" />
+                                    <input type="email" className="form-control h-[50px] rounded-xl font-serif block w-full my-1 px-[0.75rem] text-base font-normal leading-[1.5] text-imputFootr bg-white bg-clip-padding border border-solid border-borderInputFooter appearance-none m-0" id="email" placeholder="Ingrese su correo" />
                                 </div>
 
                                 <div className="form-group mb-5 py-2">
