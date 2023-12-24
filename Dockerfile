@@ -19,6 +19,6 @@ RUN npm install --production
 
 COPY --from=builder /app/.next ./.next
 
-EXPOSE 80
+EXPOSE 3000
 
 CMD ["npm", "start"]
